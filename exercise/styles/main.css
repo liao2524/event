@@ -100,14 +100,14 @@
 .jnNav {
     background:#FFFFFF;
     border: 1px solid #B1B1B1;
-	border-top:0;
+    border-top:0;
     left: 0;
     overflow: hidden;
     position: absolute;
     top: 37px;
     width: 474px;
     z-index: 1000;
-	display:none;
+    display:none;
 }
 .jnNav .subitem {
     float: left;
@@ -120,7 +120,7 @@
     border-top: 1px dashed #C4C4C4;
     overflow: hidden;
     padding: 8px 0;
-	float:left;
+    float:left;
 }
 .jnNav .subitem .fore {
     border-top-style: none;
@@ -137,8 +137,33 @@
 .jnNav .subitem dt a {
     color: #000;
     font-weight: 700;
-	font-size:12px;
-	padding:0;
+    font-size:12px;
+    padding:0;
+}
+.jnNav .subitem dd {
+    float: left;
+    overflow: hidden;
+    padding: 0;
+    width: 364px;
+}
+.jnNav .subitem em {
+    border-right: 1px solid #CCCCCC;
+    float: left;
+    font-style: normal;
+    height: 14px;
+    line-height: 14px;
+    margin: 5px 0;
+    padding: 0 8px;
+}
+.jnNav .subitem em a {
+    color: #666666;
+    white-space: nowrap;
+    font-size:12px;
+    font-weight:normal;
+    padding:0;
+}
+.jnNav .subitem em.noborder {
+    border-right: 0 none;
 }
 /* 主体样式 */
 #content{
@@ -172,8 +197,7 @@
     background-color:#6E6E6E;
 } 
 .jnCatainfo{
-    
-    border-style: none solid solid;
+    border: 1px solid #6E6E6E;
     border-width: 0 1px 1px;
     height: 524px;
     overflow: hidden;
@@ -185,6 +209,7 @@
     height: 24px;
     line-height:24px;
     width: 164px;
+    clear: both;
 }
 .jnCatainfo ul {
     float: left;
@@ -198,13 +223,81 @@
     width: 79px;
     overflow: hidden;
     position:relative;
-}                                                      
+}  
+.jnCatainfo li a{
+    color: #444444;
+}
+.jnCatainfo li a:hover{
+    color: #008CD7;
+    text-decoration: none;
+}
+.jnCatainfo li a.promoted{
+    color:#F9044E;
+}
+.jnCatainfo li .hot {
+    background: url("../images/hot.gif") no-repeat scroll 0 0 transparent;
+    height: 16px;
+    position: absolute;
+    top: 0;
+    width: 21px;
+}
+/*滚动广告样式*/
+#jnImageroll {
+    float: left;
+    height: 320px;
+    width: 550px;
+    margin: 0 11px 0 0;
+    overflow: hidden;
+    position: relative;
+}
+#jnImageroll img {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+#jnImageroll div {
+    bottom: 0;
+    overflow: hidden;
+    position: absolute;
+    float: left;
+}
+#jnImageroll div a {
+    background-color: #444444;
+    color: #FFFFFF;
+    float: left;
+    height: 32px;
+    margin-right: 1px;
+    overflow: hidden;
+    padding: 5px 15px;
+    text-align: center;
+    width: 79px;
+}
+#jnImageroll div a:hover {
+    text-decoration: none;
+}
+#jnImageroll div a em {
+    cursor: pointer;
+    display: block;
+    height: 16px;
+    overflow: hidden;
+    width: 79px;
+}
+#jnImageroll .last {
+    margin: 0;
+    width: 80px;
+}
+#jnImageroll a.chos {
+    background: url("../images/adindex.gif") no-repeat center 39px #37A7D7;
+    color: #FFFFFF;
+}
+
 /*公告分区样式*/
 #jnNotice{
     float: left;
-    height: 321px;
-    overflow: hidden;
-    width: 230px;
+    height: 320px;
+    margin: hidden;
+    position: relative;
+    width: 550px;
 }
 /*品牌分区样式*/
 #jnBrand {
