@@ -1,4 +1,21 @@
 /* 首页大屏广告效果 */
+//显示不同的图片
+function showImg(index){
+	var $rollobj = $("#jnImageroll");
+	var $rolllist = $rollobj.find("div a");
+	var newhref = $rolllist.eq(index).attr("href");
+	$("#JS_imgWrap").attr("href",newhref)
+			        .find("img")
+			        .eq(index)
+			        .stop(true,true)
+			        .fadeIn().siblings()
+			        .fadeOut();
+	       $rolllist.removeClass("chos")
+	               .css("opacity","0.7")
+			       .eq(index)
+			       .addClass("chos")
+			       .css("opacity","1"); 
+}
 
 
 $(function(){
@@ -24,13 +41,3 @@ $(function(){
 			} , 5000);
 	}).trigger("mouseleave");
 });
-//显示不同的图片
-function showImg(index){
-	var $rollobj = $("#jnImageroll");
-	var $rolllist = $rollobj.find("div a");
-	var newhref = $rolllist.eq(index).attr("href");
-	$("#JS_imgWrap").attr("href",newhref)
-			 .find("img").eq(index).stop(true,true).fadeIn().siblings().fadeOut();
-	$rolllist.removeClass("chos").css("opacity","0.7")
-			 .eq(index).addClass("chos").css("opacity","1"); 
-}

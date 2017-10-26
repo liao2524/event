@@ -1,12 +1,37 @@
 ﻿/*衣服颜色切换*/
 $(function(){
 	$(".color_change ul li img").click(function(){    
-		  var imgCalss= $(this).attr("class");
-		  alert(imgCalss);
-		  $(".imgList li").addClass("hide").find('imgCalss').removeClass("hide");
-		  alert(imgCalss);
-		  // $(".imgList li[calss='imgCalss']").removeClass("hide");
+		  var cl= $(this).attr("class");
+		  // alert(cl);
+		
+		  $(".imgList li").removeClass("hide").hide();
+		  $(".imgList li").each(function() {
+		  	// alert($(this).attr("class"));
+		  	var list=$(this).attr("class");
+		  	// alert(list);
+		  	if (cl==list) {
+		  		$(this).show();
+		  	}
+		  });
+
+		  
+		  
 		  $(this).addClass("hover").parent().siblings().find("img").removeClass("hover");
+		  // var val=$(".imgList li:first").attr("class");
+
+		  // for (var i = 0; i <$li.length; i++) {
+			
+		  // 	var imgClass=$li[i].attr("alt");
+		  	
+		  // 	if (cl==imgClass) {
+		  // 		show();
+		  // 	}
+		  // }
+		  // $(".imgList li[class*=cl]").show();
+		  				  // $(".imgList li").;
+		   //  var a=$(".imgList li.imgC").attr("class");              
+		   // alert(a);
+		  // $(".imgList li[calss='imgClass']").removeClass("hide");
 		  // var imgSrc = $(this).attr("src");
 		  // var i = imgSrc.lastIndexOf(".");
 		  // var unit = imgSrc.substring(i);
